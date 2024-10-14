@@ -1,0 +1,326 @@
+/* Rooteo de colores */
+:root{
+    --Primary-Color: #493628;
+    --Primary-Color-light: #715a48;
+    --Secondary-Color: #D6C0B3;
+    --Secondary-Color-light: #81DAE3;
+    --Text-Color: #D6C0B3;
+}
+
+/* Ajustes a todo */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: system-ui;
+}
+
+body{
+    background: #E4E0E1;
+}
+
+/* Navegacion */
+.nav{
+    background: var(--Primary-Color);
+    color: var(--Text-Color);
+    padding: 15px;
+    border: 3px solid #000000ce; 
+}
+
+.nav-container{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+}
+
+.nav-container a{
+    color: var(--Text-Color);
+    margin-right: 1rem;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--Primary-Color-light);
+    padding: .6rem 1rem;
+    border-radius: 10px;
+    display: inline-block; /* Asegura que el elemento se comporte como un bloque */
+    transition: transform 0.4s, color 0.4s, background-color 0.4s; /* Transición para el hover */
+    
+}
+
+.nav-container a:hover{
+    
+    color: var(--Primary-Color);
+    background-color: var(--Secondary-Color);
+    transform: scale(1.1);
+}
+
+
+
+/* form */
+.container{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    gap: 3rem;
+
+}
+
+
+label {
+    display: block; 
+    margin-bottom: 10px; 
+    font-weight: bold; 
+    color: white;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.submit {
+    background-color: var(--Primary-Color); 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 1rem;
+}
+
+.submit:hover {
+    transition: .4s;
+    color: black;
+    background-color: var(--Secondary-Color);
+}
+
+
+.footer {
+    background-color: var(--Primary-Color);
+    border: 3px solid #000000ce; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--Text-Color);
+    padding: 20px;
+    font-weight: 500;
+ 
+    
+}
+
+/* mensaje */
+.message {
+    position: fixed;
+    top: 100px; 
+    right: 40px; 
+    background-color: var(--Primary-Color); 
+    color: white; 
+    padding: 15px; 
+    border-radius:10px; 
+    z-index: 1000; 
+    transition: opacity 0.5s; 
+    opacity: 1; 
+}
+
+
+
+
+
+
+/* Formulario a la izquierda */
+#pet-form {
+    flex: 1; /* Ocupa el 50% del espacio */
+    background-color: var(--Primary-Color-light);
+    padding: 20px;
+    border: 3px solid #000000ce;
+    border-radius: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    height: 600px;
+    margin-top: 4rem;
+
+}
+
+/* Tabla a la derecha */
+.table-container {
+    flex: 1; /* Ocupa el 50% del espacio */
+    background-color: var(--Primary-Color-light);
+    padding: 20px;
+    border: 3px solid #000000ce;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Habilita el scroll vertical */
+    height: 600px; /* Ocupa toda la altura del contenedor */
+    margin-top: 4rem;
+
+}
+
+/* Tamaño fijo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px; /* Aplica el redondeo también a la tabla */
+    overflow: hidden; /* Asegúrate de que el contenido no sobresalga */
+}
+
+table, th, td {
+    border: 1px solid #dddddd71;
+}
+
+th, td {
+    padding: 8px;
+}
+
+th {
+    color: white;
+    font-size: 18px;
+    background-color: var(--Primary-Color)
+
+
+}
+
+/* Botones de la tabla */
+.table-btn {
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.titles{
+    text-align: center;
+    
+}
+
+.edit-btn {
+    background-color: var(--Primary-Color);
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    color: white;
+}
+
+.edit-btn:hover{
+    background-color: #3a7633; 
+    transition: .3s;
+}
+
+.delete-btn {
+    background-color: var(--Primary-Color);
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+    color: white;
+}
+
+.delete-btn:hover{
+    background-color: #a12c24; 
+    transition: .3s;
+
+}
+
+.id{
+    color: white;
+    font-weight: 700;
+    background-color: var(--Primary-Color);
+}
+
+.nombre{
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: var(--Primary-Color-light);
+
+}
+
+.acciones{
+    color: white;
+    background-color: var(--Primary-Color-light);
+
+
+}
+
+.tittle{
+    margin-top: 0.7rem;
+    color: white;
+    background-color: var(--Primary-Color);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* MODAL */
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #E4E0E1;
+    margin-bottom: 1rem;
+    color: var(--Primary-Color);
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; /* Opcional: establecer un ancho máximo */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el modal */
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.ed{
+text-align: center;
+margin-bottom: 1rem;
+}
+
+.names{
+color: var(--Primary-Color);
+}
+
+.inputs{
+    background-color: var(--Secondary-Color);
+}
+
+.close {
+    color: #841111;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(50, 7, 7);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.acciones {
+    display: flex;
+    flex-direction: column; /* Cambia a 'row' si quieres que estén en una fila */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100%; /* Asegura que ocupe toda la altura de la celda */
+}

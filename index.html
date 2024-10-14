@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Mascotas</title>
+    <link rel="stylesheet" href="./styles/stylei.css">
+</head>
+<body>
+    
+    <!-- Nav -->
+    <nav class="nav">
+        <div class="nav-container">
+         <div class="logo">
+             <h1>🐱 Amigos Peludos 🐶</h1>
+         </div>
+         <div class="links">
+             <a href="./index.html">Registro</a>
+         </div>
+        </div>
+     </nav>
+ 
+     <!-- Formulario y Tabla -->
+     <div class="container">
+ 
+         <!-- Formulario -->
+         <form id="pet-form">
+            <div class="form-group">
+                <h1 class="tittle"> Agregar Mascota</h1>
+            </div>
+        
+            <div class="form-group">
+                <label for="pet-name">Nombre de Mascota:</label>
+                <input type="text" id="pet-name" name="nombre" placeholder="SrGato" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="pet-age">Edad:</label>
+                <input type="number" id="pet-age" name="edad" placeholder="¿Años?" required min="0">
+            </div>
+        
+            <div class="form-group">
+                <label for="pet-gender">Sexo:</label>
+                <select id="pet-gender" name="sexo" required>
+                    <option value="">Seleccione...</option>
+                    <option value="hembra">Hembra</option>
+                    <option value="macho">Macho</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="birth-date">Fecha de nacimiento:</label>
+                <input type="date" id="birth-date" name="fecha_nacimiento" required> <!-- Ajustado aquí -->
+            </div>
+        
+            <input type="hidden" id="task-id" value="">
+        
+            <div class="form-group">
+                <button class="submit" type="submit" id="submit-button">Agregar</button>
+            </div>
+        </form>
+        
+ 
+         <!-- Tabla a la derecha -->
+         <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="titles">ID</th>
+                        <th class="titles">Nombre</th>
+                        <th class="titles">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tasks">
+                  
+                </tbody>
+            </table>
+        </div>
+ 
+     </div>
+ 
+ 
+     <!-- Footer -->
+     <footer class="footer">
+         <div class="footer-div">
+             <p>&copy; 2024 Jesus Zavala. Todos los derechos reservados.</p>
+         </div>
+     </footer>
+ 
+     <script src="./js/ajax.js"></script>
+     
+
+<!-- Modal para editar mascota -->
+<div id="edit-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+        <h2 class="ed">Editar Mascota</h2>
+        <form id="edit-pet-form">
+            <div class="form-group">
+                <label for="edit-pet-name" class="names">Nombre de Mascota:</label>
+                <input type="text" id="edit-pet-name" name="nombre" required class="inputs">
+            </div>
+
+            <div class="form-group">
+                <label for="edit-pet-age" class="names">Edad:</label>
+                <input type="number" id="edit-pet-age" name="edad" required min="0" class="inputs">
+            </div>
+
+            <div class="form-group">
+                <label for="edit-pet-gender" class="names">Sexo:</label>
+                <select id="edit-pet-gender" name="sexo" required class="inputs">
+                    <option value="">Seleccione...</option>
+                    <option value="hembra">Hembra</option>
+                    <option value="macho">Macho</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="edit-birth-date" class="names">Fecha de nacimiento:</label>
+                <input type="date" id="edit-birth-date" name="birth-date" required class="inputs">
+            </div>
+
+            <input type="hidden" id="edit-task-id" value="">
+            <div class="form-group">
+                <button class="submit" type="submit">Actualizar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
